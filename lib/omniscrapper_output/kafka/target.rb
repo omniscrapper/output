@@ -24,7 +24,7 @@ module OmniScrapperOutput
       def call(data)
         WaterDrop::SyncProducer.call(
           serialize(data),
-          topic: @config.output_topic
+          topic: @config.kafka_topic
         )
       end
 
@@ -44,7 +44,7 @@ module OmniScrapperOutput
         attribute :target_type, Types::String.optional
 
         attribute :kafka_host, Types::String.optional
-        attribute :output_topic, Types::String.optional
+        attribute :kafka_topic, Types::String.optional
       end
     end
   end

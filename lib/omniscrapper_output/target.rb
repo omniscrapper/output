@@ -20,7 +20,7 @@ module OmniScrapperOutput
     private
 
     def target_for(type)
-      targets[type.to_sym] || raise(NonExistingTarget, type)
+      targets[type.downcase.to_sym] || raise(NonExistingTarget, type)
     end
 
     def targets
