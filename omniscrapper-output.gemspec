@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.files         = `git ls-files`.split($/)
 
+  # TODO: set specific versions of those gems
   s.add_runtime_dependency 'waterdrop'
   s.add_runtime_dependency 'dry-struct'
 end
